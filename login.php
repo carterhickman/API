@@ -1,7 +1,8 @@
 <html>
   <head>
     <title> Photo Storage Login </title>
-    	<link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="Style/style.css">
+    <link rel="stylesheet" type="text/css" href="Style/bootstrap-4.1.3-dist/css/bootstrap.min.css">
     <body>
     	<div class="loginbox">
     	<h1> Login Here </h1>
@@ -11,7 +12,7 @@
       		<p> Password </p>
       		  <input type="password" name="password" placeholder = "Enter Password:">
           </br>
-      		  <input type="submit" name="" value="Login">
+      		  <input type="submit" class="btn btn-dark" name="" value="Login">
       	</form>
     	</div>
     </body>
