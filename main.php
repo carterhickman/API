@@ -1,7 +1,7 @@
 <?php //Links the style sheet to the page ?>
 <link rel="stylesheet" type="text/css" href="style.css">
 <center>
-  <form action="upload.php" method="post" enctype="multipart/form-data">
+  <form class="photoSubmission" action="upload.php" method="post" enctype="multipart/form-data">
       Select new images to upload:
       <input type="file" name="fileToUpload" id="fileToUpload">
     </br>

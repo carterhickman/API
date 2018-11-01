@@ -76,7 +76,22 @@ h1{
 
 	color: #ffc107;
 }
+
 .defaultPhoto{
   width: 30%;
   height: auto;
+	border-style: solid;
+	border-width: thick;
+	border-color: black;
+	border-radius: 5px;
+}
+.photoSubmission{
+	color: white;
+	background-color: blue;
+	width: 50%;
+	padding: 10px;
+	border-style: solid;
+	border-width: thick;
+	border-color: black;
+	border-radius: 5px;
 }
