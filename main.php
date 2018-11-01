@@ -5,7 +5,13 @@
   //if ($_GET['username'] == $username && $_GET['password'] == $password){}
   if (true)
   {
-    //The php that generates all the photos goes right here:
+    $files = glob("STORAGE/*.*");
+	for ($i=0; $i<count($files); $i++)
+	{
+		$num = $files[$i];
+		echo '<img style=\"width:250px;height:250px;" src="'.$num.'" alt="random image">'."&nbsp;&nbsp;";
+		echo "</br>";
+	}
 
   }
   else
