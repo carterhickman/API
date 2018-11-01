@@ -76,3 +76,7 @@ h1{
 
 	color: #ffc107;
 }
+.defaultPhoto{
+  width: 30%;
+  height: auto;
+}

@@ -1,3 +1,5 @@
+<?php //Links the style sheet to the page ?>
+<link rel="stylesheet" type="text/css" href="style.css">
 <?php
   // Here is where the photos will be loaded into the page and the page will be laid out
   //Username and password for testing purposes:
@@ -11,8 +13,9 @@
   	for ($i=0; $i<count($files); $i++)
   	{
   		$num = $files[$i];
-  		echo '<img style=\"width:250px;height:250px;" src="'.$num.'" alt="random image">'."&nbsp;&nbsp;";
-  		echo "</br>";
+  		echo '<img class=\'defaultPhoto\' src="'.$num.'" alt="random image">'."&nbsp;&nbsp;";
+      //the break only allows us one per row
+      //echo "</br>";
   	}
   }
   else
