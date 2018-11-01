@@ -5,6 +5,7 @@
   //if ($_GET['username'] == $username && $_GET['password'] == $password){}
   if (true)
   {
+	//code that displays all files in STORAGE directory
     $files = glob("STORAGE/*.*");
 	for ($i=0; $i<count($files); $i++)
 	{
