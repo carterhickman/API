@@ -5,6 +5,8 @@
       Select new images to upload:
       <input type="file" name="fileToUpload" id="fileToUpload">
     </br>
+    </br>
+    </br>
       <input type="submit" value="Upload Image" name="submit">
   </form>
 </center>
