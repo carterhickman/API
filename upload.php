@@ -23,4 +23,14 @@ if(isset($_POST["submit"])) {
         $uploadOk = 0;
     }
 }
+//<script type="text/javascript">location.href = 'main.php/?upload=1';</script>
+//<script type="text/javascript">location.replace(\"main.php/?upload=1\";</script>
+//echo "location.replace(\"main.php/?upload=1\");";
+function relocate($url) {
+    if ($url == -1) $url = $_SERVER['HTTP_REFERER'] ? $_SERVER['HTTP_REFERER'] : '/';
+    Header("Location: $url");
+    die();
+}
+
+relocate('./main.php?upload=1'); // home
 ?>
