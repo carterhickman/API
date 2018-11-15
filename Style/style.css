@@ -1,17 +1,15 @@
 body{
-	margin: 0;
-	padding-bottom: 50px;
-	padding-top: 20px;
-	background-size: cover;
-	background-position: center;
-	font-family: sans-serif;
-	/*background: linear-gradient(bottom, blue, grey);*/
+
+}
+
+.MainBody{
 	background-color: grey;
 }
+
 .loginbox{
 	width: 320px;
 	height: 420px;
-	background: #008;
+	background: #009933;
 	color: #fff;
 	top: 50%;
 	left: 50%;
@@ -19,19 +17,24 @@ body{
 	transform: translate(-50%, -50%);
 	box-sizing: border box;
 	padding:30px 30px;
+
+	border-radius: 10px;
+	border-width: 2%;
+	border-color: #000000;
 }
 
-h1{
+.loginBoxHeader{
 	margin: 0;
 	padding: 0 0 20px;
 	text-align: center;
-	font-size: 22px;
+	font-size: 40px;
 }
 
 .loginbox p{
 	margin: 0;
 	padding: 0;
 	font-weight: bold;
+	font-size: 120%;
 }
 
 .loginbox input{
@@ -53,19 +56,20 @@ h1{
 	border:none;
 	outline:none;
 	height: 40px;
-	background: #fb2525;
-	color: #fff;
+	background: #e6e6e6;
+	color: #000;
 	font-size: 18px;
+	font-weight: bold;
 	border-radius: 20px;
-
 	}
 
 .loginox input[type="submit"]:hover
 	{
 		cursor: pointer;
-		background: #ffc107;
+		background: #e6e6e6;
 		color: #000;
-
+		font-weight: bold;
+		height: 45px;
 	}
 .loginbox a{
 	text-decoration:none;
@@ -75,7 +79,6 @@ h1{
 	}
 
 .loginbox a:hover{
-
 	color: #ffc107;
 }
 
@@ -89,12 +92,19 @@ h1{
 	border-radius: 5px;
 }
 .photoSubmission{
+	font-weight: bold;
 	color: white;
-	background-color: blue;
+	background-color: #009933;
 	width: 50%;
 	padding: 10px;
 	border-style: solid;
 	border-width: thick;
 	border-color: black;
 	border-radius: 5px;
+}
+
+.MainLoginHeader{
+	font-size: 300%;
+	color: white;
+	font-weight: bold;
 }

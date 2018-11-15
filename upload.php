@@ -1,5 +1,5 @@
 <?php
-$target_dir = "STORAGE/";
+$target_dir = "./STORAGE/";
 $target_file = $target_dir.basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -11,7 +11,7 @@ if(isset($_POST["submit"])) {
         $uploadOk = 1;
         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file))
         {
-          echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+          echo "The file ".basename( $_FILES["fileToUpload"]["name"])." has been uploaded.";
         }
         else
         {
@@ -26,11 +26,12 @@ if(isset($_POST["submit"])) {
 //<script type="text/javascript">location.href = 'main.php/?upload=1';</script>
 //<script type="text/javascript">location.replace(\"main.php/?upload=1\";</script>
 //echo "location.replace(\"main.php/?upload=1\");";
+
 function relocate($url) {
     if ($url == -1) $url = $_SERVER['HTTP_REFERER'] ? $_SERVER['HTTP_REFERER'] : '/';
     Header("Location: $url");
     die();
 }
 
-relocate('./main.php?upload=1'); // home
+relocate('./main.php?upload=1');
 ?>
