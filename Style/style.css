@@ -1,6 +1,7 @@
 body{
 	margin: 0;
-	padding: 0;
+	padding-bottom: 50px;
+	padding-top: 20px;
 	background-size: cover;
 	background-position: center;
 	font-family: sans-serif;
@@ -79,6 +80,7 @@ h1{
 }
 
 .defaultPhoto{
+	padding: 5px;
   width: 30%;
   height: auto;
 	border-style: solid;
