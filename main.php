@@ -13,6 +13,8 @@
     $submittedUserName = '';
     $submittedPassword = '';
 
+    //this is a test
+
     //This is needed because in the event the submission was successful, there would be no username
     //and password attached to the main page.
     if (isset($_POST['username']) && isset($_POST['password']))
