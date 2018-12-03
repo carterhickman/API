@@ -3,13 +3,13 @@ body{
 }
 
 .MainBody{
-	background-color: #514c47;
+	background-color: grey;
 }
 
 .loginbox{
 	width: 320px;
 	height: 420px;
-	background: #00694e;
+	background: #009933;
 	color: #fff;
 	top: 50%;
 	left: 50%;
@@ -17,7 +17,6 @@ body{
 	transform: translate(-50%, -50%);
 	box-sizing: border box;
 	padding:30px 30px;
-
 	border-radius: 10px;
 	border-width: 2%;
 	border-color: #000000;
@@ -50,6 +49,7 @@ body{
 	height: 40px;
 	color: #fff;
 	font-size:16px;
+	
 }
 
 .loginbox input[type="submit"]{
@@ -58,6 +58,7 @@ body{
 	height: 40px;
 	background: #e6e6e6;
 	color: #000;
+	font-family: "Verdana";
 	font-size: 18px;
 	font-weight: bold;
 	border-radius: 20px;
@@ -73,6 +74,7 @@ body{
 	}
 .loginbox a{
 	text-decoration:none;
+	font-family: "Verdana";
 	font-size: 12px;
 	line-height: 20px;
 	color: darkgrey;
@@ -94,7 +96,7 @@ body{
 .photoSubmission{
 	font-weight: bold;
 	color: white;
-	background-color: #00694e;
+	background-color: #009933;
 	width: 50%;
 	padding: 10px;
 	border-style: solid;
@@ -105,6 +107,7 @@ body{
 
 .MainLoginHeader{
 	font-size: 300%;
+	font-family: "Verdana";
 	color: white;
 	font-weight: bold;
 }
