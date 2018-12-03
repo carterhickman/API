@@ -14,6 +14,8 @@
   <link rel="stylesheet" type="text/css" href="Style/style.css">
   <link rel="stylesheet" type="text/css" href="Style/bootstrap-4.1.3-dist/css/bootstrap.min.css">
   <center>
+ <div class='container'>
+ <div class="gallery">
   <?php
     // Here is where the photos will be loaded into the page and the page will be laid out
     //Username and password for testing purposes:
@@ -44,14 +46,50 @@
       echo "</div>";
       echo "<div class=\"col-lg-12\">";
 //IMAGE PRINTING
-    	//code that displays all files in STORAGE directory
-      $files = glob("STORAGE/*.*");
-    	for ($i=0; $i<count($files); $i++)
-    	{
-    		$num = $files[$i];
-    		echo '<img class=\'defaultPhoto\' src="'.$num.'" alt="StoredImage'.$i.'">'."&nbsp;&nbsp;";
-    	}
-      echo "</div>";
+	  // Image extensions
+	  $image_extensions = array("png","jpg","jpeg","gif");
+
+	  // Target directory
+	  $dir = 'STORAGE/';
+	  if (is_dir($dir)){
+	 
+	   if ($dh = opendir($dir)){
+		$count = 1;
+
+		// Read files
+		while (($file = readdir($dh)) !== false){
+
+		 if($file != '' && $file != '.' && $file != '..'){
+	 
+		  // Thumbnail image path
+		  $thumbnail_path = "STORAGE/".$file;
+
+		  // Image path
+		  $image_path = "STORAGE/".$file;
+	 
+		  $thumbnail_ext = pathinfo($thumbnail_path, PATHINFO_EXTENSION);
+		  $image_ext = pathinfo($image_path, PATHINFO_EXTENSION);
+
+		  // Check its not folder and it is image file
+		  if(!is_dir($image_path) && 
+			 in_array($thumbnail_ext,$image_extensions) && 
+			 in_array($image_ext,$image_extensions)){
+	   ?>
+
+		   <!-- Image -->
+		   <a href="<?php echo $image_path; ?>">
+			<img src="<?php echo $thumbnail_path; ?>" alt="" title=""/>
+		   </a>
+		   <!-- --- -->
+		   <?php
+		   $count++;
+		  }
+		 }
+	 
+		}
+		closedir($dh);
+	   }
+  }
     }
     else
     {
@@ -59,5 +97,7 @@
       include('login.php');
     }
   ?>
+   </div>
+</div>
   </center>
 </body>
