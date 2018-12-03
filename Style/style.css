@@ -111,6 +111,11 @@ body{
   -ms-transform: scale(1.05);
   transform: scale(1.05);
   z-index: 5;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 15px;
+  opacity: 0.75;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 .photoSubmission{
 	font-weight: bold;
