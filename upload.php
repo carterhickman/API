@@ -1,4 +1,16 @@
 <?php
+/**
+@file upload.php
+@brief called by main.php, gets all the images stored in a file and uploads them to the website
+@author Mohamed Jallow
+**/
+?>
+
+
+
+
+
+<?php
 $target_dir = "./STORAGE/";
 $target_file = $target_dir.basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;

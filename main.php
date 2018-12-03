@@ -1,4 +1,15 @@
+<?php
+/**
+@file main.php
+@brief main program of the project. User enters their username and Password, check validity, calls upload.php to load images
+@author Daniel Ingram 
+**/
+
+?>
+
+
 <?php //Links the style sheet to the page ?>
+
 <body class="MainBody">
   <link rel="stylesheet" type="text/css" href="Style/style.css">
   <link rel="stylesheet" type="text/css" href="Style/bootstrap-4.1.3-dist/css/bootstrap.min.css">
@@ -15,6 +26,7 @@
 
     //this is a test
 
+
     //This is needed because in the event the submission was successful, there would be no username
     //and password attached to the main page.
     if (isset($_POST['username']) && isset($_POST['password']))
@@ -30,7 +42,6 @@
       echo "<div class=\"col-lg-12\">";
       echo "<form class=\"photoSubmission\" action=\"upload.php\" method=\"post\" enctype=\"multipart/form-data\">Select new images to upload:  <input type=\"file\" class=\"\" name=\"fileToUpload\" id=\"fileToUpload\"><input type=\"submit\" class=\"btn btn-dark\" value=\"Upload Image\" name=\"submit\"></form>";
       echo "</div>";
-
       echo "<div class=\"col-lg-12\">";
     	//code that displays all files in STORAGE directory
       $files = glob("STORAGE/*.*");
