@@ -43,14 +43,51 @@
       echo "<form class=\"photoSubmission\" action=\"upload.php\" method=\"post\" enctype=\"multipart/form-data\">Select new images to upload:  <input type=\"file\" class=\"\" name=\"fileToUpload\" id=\"fileToUpload\"><input type=\"submit\" class=\"btn btn-dark\" value=\"Upload Image\" name=\"submit\"></form>";
       echo "</div>";
       echo "<div class=\"col-lg-12\">";
-    	//code that displays all files in STORAGE directory
-      $files = glob("STORAGE/*.*");
-    	for ($i=0; $i<count($files); $i++)
-    	{
-    		$num = $files[$i];
-    		echo '<img class=\'defaultPhoto\' src="'.$num.'" alt="StoredImage'.$i.'">'."&nbsp;&nbsp;";
-    	}
-      echo "</div>";
+//IMAGE PRINTING
+	  // Image extensions
+	  $image_extensions = array("png","jpg","jpeg","gif");
+
+	  // Target directory
+	  $dir = 'STORAGE/';
+	  if (is_dir($dir)){
+	 
+	   if ($dh = opendir($dir)){
+		$count = 1;
+
+		// Read files
+		while (($file = readdir($dh)) !== false){
+
+		 if($file != '' && $file != '.' && $file != '..'){
+	 
+		  // Thumbnail image path
+		  $thumbnail_path = "STORAGE/".$file;
+
+		  // Image path
+		  $image_path = "STORAGE/".$file;
+	 
+		  $thumbnail_ext = pathinfo($thumbnail_path, PATHINFO_EXTENSION);
+		  $image_ext = pathinfo($image_path, PATHINFO_EXTENSION);
+
+		  // Check its not folder and it is image file
+		  if(!is_dir($image_path) && 
+			 in_array($thumbnail_ext,$image_extensions) && 
+			 in_array($image_ext,$image_extensions)){
+	   ?>
+
+		   <!-- Image -->
+		   <a href="<?php echo $image_path; ?>">
+			<img src="<?php echo $thumbnail_path; ?>" alt="" title=""/>
+		   </a>
+		   <!-- --- -->
+		   <?php
+		   $count++;
+		  }
+		 }
+	 
+		}
+		closedir($dh);
+	   }
+  }
     }
     else
     {

@@ -93,6 +93,25 @@ body{
 	border-color: black;
 	border-radius: 5px;
 }
+.container .gallery a img {
+	padding: 5px;
+  width: 30%;
+  height: 30%;
+	border-style: groove;
+	border-width: 5px;
+	border-color: black;
+	border-radius: 5px;
+}
+
+
+.container .gallery a:hover img {
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+  z-index: 5;
+}
 .photoSubmission{
 	font-weight: bold;
 	color: white;
