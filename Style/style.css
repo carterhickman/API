@@ -87,7 +87,7 @@ body{
 .defaultPhoto{
 	padding: 5px;
   width: 30%;
-  height: auto;
+  height: 30%;
 	border-style: solid;
 	border-width: thick;
 	border-color: black;
