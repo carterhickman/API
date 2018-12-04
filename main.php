@@ -2,7 +2,7 @@
 /**
 @file main.php
 @brief main program of the project. User enters their username and Password, check validity, calls upload.php to load images
-@author Daniel Ingram 
+@author Daniel Ingram, Mohamed Jallow
 **/
 
 ?>
@@ -45,6 +45,11 @@
       echo "<form class=\"photoSubmission\" action=\"upload.php\" method=\"post\" enctype=\"multipart/form-data\">Select new images to upload:  <input type=\"file\" class=\"\" name=\"fileToUpload\" id=\"fileToUpload\"><input type=\"submit\" class=\"btn btn-dark\" value=\"Upload Image\" name=\"submit\"></form>";
       echo "</div>";
       echo "<div class=\"col-lg-12\">";
+
+//added by me
+
+
+
 //IMAGE PRINTING
 	  // Image extensions
 	  $image_extensions = array("png","jpg","jpeg","gif");
@@ -52,7 +57,7 @@
 	  // Target directory
 	  $dir = 'STORAGE/';
 	  if (is_dir($dir)){
-	 
+
 	   if ($dh = opendir($dir)){
 		$count = 1;
 
@@ -60,19 +65,19 @@
 		while (($file = readdir($dh)) !== false){
 
 		 if($file != '' && $file != '.' && $file != '..'){
-	 
+
 		  // Thumbnail image path
 		  $thumbnail_path = "STORAGE/".$file;
 
 		  // Image path
 		  $image_path = "STORAGE/".$file;
-	 
+
 		  $thumbnail_ext = pathinfo($thumbnail_path, PATHINFO_EXTENSION);
 		  $image_ext = pathinfo($image_path, PATHINFO_EXTENSION);
 
 		  // Check its not folder and it is image file
-		  if(!is_dir($image_path) && 
-			 in_array($thumbnail_ext,$image_extensions) && 
+		  if(!is_dir($image_path) &&
+			 in_array($thumbnail_ext,$image_extensions) &&
 			 in_array($image_ext,$image_extensions)){
 	   ?>
 
@@ -85,7 +90,7 @@
 		   $count++;
 		  }
 		 }
-	 
+
 		}
 		closedir($dh);
 	   }

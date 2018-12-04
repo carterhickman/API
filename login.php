@@ -14,7 +14,7 @@
     <title>Bob Catman Photo Storage Login </title>
     <link rel="stylesheet" type="text/css" href="Style/style.css">
     <link rel="stylesheet" type="text/css" href="Style/bootstrap-4.1.3-dist/css/bootstrap.min.css">
-    <body class="MainBody">
+    <body class="MainBody1">
     </br>
       <div class="col-lg-12">
         <center>
